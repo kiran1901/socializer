@@ -1,41 +1,44 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from './components/AppHeader.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <header>
+        <TheHeader />
+    </header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+        <!-- <div class="wrapper">
+        <HelloWorld msg="You did it!" />
 
-  <RouterView />
+        <nav>
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
+        </nav>
+        </div> -->
+
+    <RouterView />
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+    /* line-height: 1.5;
+    max-height: 100vh; */
 }
 
 .logo {
-  display: block;
-  margin: 0 auto 2rem;
+    display: block;
+    margin: 0 auto 2rem;
 }
 
 nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -55,7 +58,7 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-
+/* 
 @media (min-width: 1024px) {
   header {
     display: flex;
@@ -81,5 +84,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>
