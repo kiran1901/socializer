@@ -14,11 +14,12 @@ import TheHeader from './components/AppHeader.vue'
         <!-- <div class="wrapper">
         <HelloWorld msg="You did it!" />
 
-        <nav>
+        
+        </div> -->
+        <!-- <nav>
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/about">About</RouterLink>
-        </nav>
-        </div> -->
+        </nav> -->
 
     <RouterView />
 </template>
@@ -39,6 +40,7 @@ nav {
     font-size: 12px;
     text-align: center;
     margin-top: 2rem;
+    z-index: 1;
 }
 
 nav a.router-link-exact-active {
