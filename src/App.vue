@@ -5,9 +5,31 @@ import TheHeader from './components/AppHeader.vue'
 </script>
 
 <template>
-    <header>
-        <TheHeader />
-    </header>
+  <div id="socializer-app">
+        <div class="app__container">
+            <!-- <nav class="app__menu">
+                <the-menu />
+            </nav> -->
+
+            <header class="app__header">
+              <TheHeader />
+            </header>
+
+            <div class="app__content">
+                <main class="app__pages">
+                    <router-view />
+                </main>
+
+                <footer class="app__footer">
+                    <the-footer />
+                </footer>
+            </div>
+        </div>
+
+        <div class="app__loading">
+            <loader v-show="loadingCount" />
+        </div>
+    </div>
 
     <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
@@ -21,10 +43,32 @@ import TheHeader from './components/AppHeader.vue'
             <RouterLink to="/about">About</RouterLink>
         </nav> -->
 
-    <RouterView />
+    <!-- <RouterView /> -->
 </template>
 
-<style scoped>
+<style lang="scss">
+
+#socializer-app {
+        .app {
+            &__container {
+                display: grid;
+                grid-template-columns: auto 1fr; // 2 columns
+                // grid-template-rows: $spacing-header-height auto; // 2 rows
+                height: 100vh;
+                width: 100%;
+            }
+
+            &__menu {
+                grid-area: 1 / 1 / 3 / 2; // row start / column start / row end / column end
+            }
+
+            &__content {
+                overflow: auto;
+            }
+        }
+    }
+
+
 header {
     /* line-height: 1.5;
     max-height: 100vh; */
