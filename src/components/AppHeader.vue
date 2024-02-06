@@ -28,7 +28,7 @@ a {
 /* header */
 
 .header {
-    background-color: #fff;
+    background-color: #b5cbbb;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     position: fixed;
     width: 100%;
@@ -40,7 +40,7 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #b5cbbb;
 }
 
 .header li a {
