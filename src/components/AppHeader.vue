@@ -19,16 +19,13 @@ defineProps({
 </template>
 
 <style scoped>
-
-
 a {
-    color: #000;
+  color: #2BAE66;
 }
 
 /* header */
-
 .header {
-    background-color: #b5cbbb;
+    background-color: #FCF6F5;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     position: fixed;
     width: 100%;
@@ -40,7 +37,8 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #b5cbbb;
+  background-color: #FCF6F5;
+  color: #2BAE66;
 }
 
 .header li a {
@@ -48,6 +46,8 @@ a {
   padding: 20px 20px;
   border-right: 1px solid #f4f4f4;
   text-decoration: none;
+  color: #2BAE66;
+  transition: color 0.3s ease; /* Add transition for text color */
 }
 
 .header li a:hover,
@@ -61,18 +61,31 @@ a {
     font-size: 2em;
     padding: 10px 20px;
     text-decoration: none;
+    transition: color 0.3s ease; /* Add transition for text color */
 }
 
 /* menu */
-
 .header .menu {
   clear: both;
   max-height: 0;
-  transition: max-height .2s ease-out;
+  transition: max-height 0.3s ease-out; /* Add transition for max-height */
+}
+
+/* menu items */
+.header li {
+  transition: transform 0.3s ease-out; /* Add transition for menu items */
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+  transition: max-height 0.3s ease-in; /* Add transition when menu opens */
+}
+
+.header .menu-btn:checked ~ .menu li {
+  transform: translateY(0); /* Shift menu items vertically when menu opens */
 }
 
 /* menu icon */
-
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
@@ -80,6 +93,7 @@ a {
   padding: 28px 20px;
   position: relative;
   user-select: none;
+  transition: transform 0.3s ease; /* Add transition for menu icon */
 }
 
 .header .menu-icon .navicon {
@@ -87,7 +101,7 @@ a {
   display: block;
   height: 2px;
   position: relative;
-  transition: background .2s ease-out;
+  transition: background 0.3s ease; /* Add transition for background color */
   width: 18px;
 }
 
@@ -98,7 +112,7 @@ a {
   display: block;
   height: 100%;
   position: absolute;
-  transition: all .2s ease-out;
+  transition: all 0.3s ease; /* Add transition for all properties */
   width: 100%;
 }
 
@@ -111,13 +125,13 @@ a {
 }
 
 /* menu btn */
-
 .header .menu-btn {
   display: none;
 }
 
 .header .menu-btn:checked ~ .menu {
   max-height: 240px;
+  transition: max-height 0.3s ease-in; /* Add transition when menu opens */
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -138,7 +152,6 @@ a {
 }
 
 /* 48em = 768px */
-
 @media (min-width: 48em) {
   .header li {
     float: left;
@@ -155,6 +168,5 @@ a {
     display: none;
   }
 }
-
 
 </style>

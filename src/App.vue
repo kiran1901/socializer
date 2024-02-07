@@ -2,13 +2,18 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import TheHeader from './components/AppHeader.vue'
+import SignUpComponent from './components/SignUp.vue'
 </script>
 
 <template>
     <div id="socializer-app">
-        
-        <TheHeader /> 
 
+        <div class="socializer-app-header">
+            <TheHeader />
+        </div>
+        <!-- <div class="socializer-app-body">
+            <SignUpComponent />
+        </div> -->
         <div class="app__loading">
             <loader v-show="loadingCount" />
         </div>
@@ -29,6 +34,13 @@ import TheHeader from './components/AppHeader.vue'
     <!-- <RouterView /> -->
 </template>
 
-<style lang="scss">
+<style>
+
+#socializer-app{ 
+    display: flex;
+    /* flex-dir */
+
+}
+
 
 </style>
