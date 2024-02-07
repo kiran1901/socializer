@@ -131,7 +131,7 @@ a {
 
 .header .menu-btn:checked ~ .menu {
   max-height: 240px;
-  transition: max-height 0.3s ease-in; /* Add transition when menu opens */
+  transition: max-height 0.3s ease-in;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
