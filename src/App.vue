@@ -11,9 +11,9 @@ import SignUpComponent from './components/SignUp.vue'
         <div class="socializer-app-header">
             <TheHeader />
         </div>
-        <!-- <div class="socializer-app-body">
+        <div class="socializer-app-body">
             <SignUpComponent />
-        </div> -->
+        </div>
         <div class="app__loading">
             <loader v-show="loadingCount" />
         </div>
@@ -38,8 +38,7 @@ import SignUpComponent from './components/SignUp.vue'
 
 #socializer-app{ 
     display: flex;
-    /* flex-dir */
-
+    flex-direction: column;
 }
 
 

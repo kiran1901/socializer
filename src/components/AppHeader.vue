@@ -25,11 +25,11 @@ a {
 
 /* header */
 .header {
-    background-color: #FCF6F5;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-    position: fixed;
+    /* background-color: #FCF6F5; */
+    /* box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1); */
+    /* position: fixed; */
     width: 100%;
-    z-index: 3;
+    /* z-index: 3; */
 }
 
 .header ul {
@@ -37,7 +37,7 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #FCF6F5;
+  /* background-color: #FCF6F5; */
   color: #2BAE66;
 }
 
@@ -52,7 +52,7 @@ a {
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
 }
 
 .header .logo {
