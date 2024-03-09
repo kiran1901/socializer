@@ -36,6 +36,10 @@ import SignUpComponent from './components/SignUp.vue'
 
 <style>
 
+.socializer-app-body {
+    height: 95vh;
+}
+
 #socializer-app{ 
     display: flex;
     flex-direction: column;
